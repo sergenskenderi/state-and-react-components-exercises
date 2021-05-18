@@ -1,17 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import Counter from './components/Counter';
+import Input from './components/Input';
+import Moods from './components/Moods';
+import Spinner from './components/Spinner';
+import Squares from './components/Squares';
+import Programmers from './components/Programmers';
+
+render(
+  <>
+    <Counter />
+     <Moods />
+    <Spinner />
+    <Input />
+    <Squares />
+    <Programmers />
+  </>
+  ,
+  document.querySelector('#root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
